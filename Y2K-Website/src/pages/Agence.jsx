@@ -30,14 +30,14 @@ const Agence = () => {
       scrollTrigger: {
         trigger: imageDivRef.current,
         // markers: true,
-        start: "top 25%",
-        end: "top -135%",
+        start: "top 0%",
+        end: "top -150%",
         pin: true,
-        pinSpacing: true,
-        pinReparent: true,
+        // pinSpacing: true,
+        // pinReparent: true,
         pinType: "transform",
-        scrub: 1, // smooth scrubbing with 1s easing
-        anticipatePin: 1,
+        // scrub: 1, // smooth scrubbing with 1s easing
+        // anticipatePin: 1,
         invalidateOnRefresh: true,
         onUpdate: (elem) => {
           let imageIndex;
@@ -54,15 +54,15 @@ const Agence = () => {
   });
 
   return (
-    <div className="parent">
+    <div>
       <div className="py-1">
         <div
           ref={imageDivRef}
-          className="absolute overflow-hidden h-[42vh] w-[32vh] rounded-3xl top-40 left-115"
+          className="absolute overflow-hidden h-[42vh] w-[32vh] rounded-3xl top-50 left-115"
         >
           <img
             ref={imageRef}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover bg-red-700"
             src="https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg"
             alt=""
           />
