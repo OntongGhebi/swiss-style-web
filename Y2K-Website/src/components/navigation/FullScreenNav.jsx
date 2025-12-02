@@ -1,39 +1,59 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
+import { NavbarContext } from "../../context/NavContext";
 
 const FullScreenNav = () => {
-  const stairingParentRef = useRef(null);
+  const fullScreenRef = useRef(null);
   const fullNavLinksRef = useRef(null);
+  const [navOpen, setNavOpen] = useContext(NavbarContext);
 
-  useGSAP(function () {
+  function gsapAnimation() {
     const tl = gsap.timeline();
-
+    tl.to(".fullscreennav", {
+      display: "block",
+    });
     tl.from(".stairing", {
       delay: 0.3,
       height: 0,
       stagger: {
-        amount: -0.2,
+        amount: -0.3,
       },
-    });
-    tl.from(fullNavLinksRef.current, {
-      opacity: 0,
     });
     tl.from(".link", {
       opacity: 0,
       rotateX: 90,
       stagger: {
-        amount: 0.2,
+        amount: -0.2,
       },
     });
-  });
+    tl.from(".navlink", {
+      opacity: 0,
+    });
+  }
+  useGSAP(
+    function () {
+      if (navOpen) {
+        gsap.to(".fullsxreennav", {
+          display: "block",
+        });
+        gsapAnimation();
+      } else {
+        gsap.to(".fullsxreennav", {
+          display: "none",
+        });
+      }
+    },
+    [navOpen]
+  );
 
   return (
     <div
+      ref={fullScreenRef}
       id="fullscreennav"
-      className="text-white overflow-x-hidden h-screen w-full absolute "
+      className="fullscreennav hidden text-white overflow-x-hidden h-screen w-full z-50 absolute "
     >
-      <div ref={stairingParentRef} className="h-screen w-full fixed">
+      <div className="h-screen w-full fixed">
         <div className="h-full w-full flex">
           <div className="stairing h-full w-1/5 bg-red-900"></div>
           <div className="stairing h-full w-1/5 bg-red-900"></div>
@@ -43,7 +63,7 @@ const FullScreenNav = () => {
         </div>
       </div>
       <div ref={fullNavLinksRef} className="relative">
-        <div className="flex w-full justify-between p-2.5 items-start">
+        <div className="navlink flex w-full justify-between p-2.5 items-start">
           <div className="">
             <div className="w-30">
               <svg
@@ -59,7 +79,12 @@ const FullScreenNav = () => {
               </svg>
             </div>
           </div>
-          <div className="h-26 w-26 relative cursor-pointer">
+          <div
+            onClick={() => {
+              setNavOpen(false);
+            }}
+            className="h-26 w-26 relative cursor-pointer"
+          >
             <div className="h-36 w-0.5 -rotate-45 origin-top absolute bg-[#D7FD50]"></div>
             <div className="h-36 w-0.5 right-0 rotate-45 origin-top absolute bg-[#D7FD50]"></div>
             <div></div>
