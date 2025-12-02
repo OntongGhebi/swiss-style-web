@@ -13,35 +13,54 @@ const FullScreenNav = () => {
     tl.to(".fullscreennav", {
       display: "block",
     });
-    tl.from(".stairing", {
-      delay: 0.3,
-      height: 0,
+    tl.to(".stairing", {
+      delay: 0.2,
+      height: "100%",
       stagger: {
         amount: -0.3,
       },
     });
-    tl.from(".link", {
+    tl.to(".link", {
+      opacity: 1,
+      rotateX: 0,
+      stagger: {
+        amount: 0.3,
+      },
+    });
+    tl.to(".navlink", {
+      opacity: 1,
+    });
+  }
+
+  function gsapAnimationReverse() {
+    const tl = gsap.timeline();
+    tl.to(".link", {
       opacity: 0,
       rotateX: 90,
       stagger: {
-        amount: -0.2,
+        amount: 0.1,
       },
     });
-    tl.from(".navlink", {
+    tl.to(".stairing", {
+      height: 0,
+      stagger: {
+        amount: 0.1,
+      },
+    });
+    tl.to(".navlink", {
       opacity: 0,
     });
+    tl.to(".fullscreennav", {
+      display: "none",
+    });
   }
+
   useGSAP(
     function () {
       if (navOpen) {
-        gsap.to(".fullsxreennav", {
-          display: "block",
-        });
         gsapAnimation();
       } else {
-        gsap.to(".fullsxreennav", {
-          display: "none",
-        });
+        gsapAnimationReverse();
       }
     },
     [navOpen]
@@ -55,11 +74,11 @@ const FullScreenNav = () => {
     >
       <div className="h-screen w-full fixed">
         <div className="h-full w-full flex">
-          <div className="stairing h-full w-1/5 bg-red-900"></div>
-          <div className="stairing h-full w-1/5 bg-red-900"></div>
-          <div className="stairing h-full w-1/5 bg-red-900"></div>
-          <div className="stairing h-full w-1/5 bg-red-900"></div>
-          <div className="stairing h-full w-1/5 bg-red-900"></div>
+          <div className="stairing h-full w-1/5 bg-black"></div>
+          <div className="stairing h-full w-1/5 bg-black"></div>
+          <div className="stairing h-full w-1/5 bg-black"></div>
+          <div className="stairing h-full w-1/5 bg-black"></div>
+          <div className="stairing h-full w-1/5 bg-black"></div>
         </div>
       </div>
       <div ref={fullNavLinksRef} className="relative">
@@ -85,8 +104,8 @@ const FullScreenNav = () => {
             }}
             className="h-26 w-26 relative cursor-pointer"
           >
-            <div className="h-36 w-0.5 -rotate-45 origin-top absolute bg-[#D7FD50]"></div>
-            <div className="h-36 w-0.5 right-0 rotate-45 origin-top absolute bg-[#D7FD50]"></div>
+            <div className="h-36 w-0.5 -rotate-45 origin-top absolute bg-[#D3FD50]"></div>
+            <div className="h-36 w-0.5 right-0 rotate-45 origin-top absolute bg-[#D3FD50]"></div>
             <div></div>
           </div>
         </div>
@@ -95,7 +114,7 @@ const FullScreenNav = () => {
             <h1 className="font-[font2] text-[17vh] leading-[0.8] pt-4 text-center uppercase">
               Projects
             </h1>
-            <div className="moveLink absolute text-black flex top-0 bg-[#D7FD50]">
+            <div className="moveLink absolute text-black flex top-0 bg-[#D3FD50]">
               <div className="moveX flex items-center">
                 <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
                   Pour Toit Voir
@@ -134,7 +153,7 @@ const FullScreenNav = () => {
             <h1 className="font-[font2] text-[17vh] leading-[0.8] pt-4 text-center uppercase">
               Agence
             </h1>
-            <div className="moveLink absolute text-black flex top-0 bg-[#D7FD50]">
+            <div className="moveLink absolute text-black flex top-0 bg-[#D3FD50]">
               <div className="moveX flex items-center">
                 <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
                   Pour Toit Voir
@@ -173,7 +192,7 @@ const FullScreenNav = () => {
             <h1 className="font-[font2] text-[17vh] leading-[0.8] pt-4 text-center uppercase">
               Contact
             </h1>
-            <div className="moveLink absolute text-black flex top-0 bg-[#D7FD50]">
+            <div className="moveLink absolute text-black flex top-0 bg-[#D3FD50]">
               <div className="moveX flex items-center">
                 <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
                   Pour Toit Voir
@@ -212,7 +231,7 @@ const FullScreenNav = () => {
             <h1 className="font-[font2] text-[17vh] leading-[0.8] pt-4 text-center uppercase">
               Blogue
             </h1>
-            <div className="moveLink absolute text-black flex top-0 bg-[#D7FD50]">
+            <div className="moveLink absolute text-black flex top-0 bg-[#D3FD50]">
               <div className="moveX flex items-center">
                 <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
                   Pour Toit Voir
