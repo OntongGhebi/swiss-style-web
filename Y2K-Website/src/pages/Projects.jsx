@@ -1,5 +1,8 @@
 import React from "react";
 import ProjectCard from "../components/projects/ProjectCard";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 const Projects = () => {
   const projects = [
@@ -23,14 +26,35 @@ const Projects = () => {
     },
   ];
 
+  gsap.registerPlugin(ScrollTrigger);
+
+  useGSAP(function () {
+    gsap.from(".hero", {
+      height: "100px",
+      stagger: {
+        amount: 0.5,
+      },
+      scrollTrigger: {
+        trigger: ".lol",
+        start: "top 100%",
+        end: "top -150%",
+        scrub: true,
+      },
+    });
+  });
+
   return (
     <div className="p-4">
       <div className="pt-[40vh]">
         <h2 className="font-[font2] text-[23vh] uppercase">Projects</h2>
       </div>
-      <div className="-mt-15">
-        {projects.map(function (elem) {
-          return <ProjectCard image1={elem.image1} image2={elem.image2} />;
+      <div className="-mt-15 lol">
+        {projects.map(function (elem, idx) {
+          return (
+            <div key={idx} className="hero w-full h-[500px] flex mb-2 gap-2">
+              <ProjectCard image1={elem.image1} image2={elem.image2} />
+            </div>
+          );
         })}
       </div>
     </div>
