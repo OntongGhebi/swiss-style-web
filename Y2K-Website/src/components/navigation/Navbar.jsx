@@ -32,7 +32,7 @@ const Navbar = () => {
         onMouseLeave={() => {
           navGreenRef.current.style.height = "0%";
         }}
-        className="lg:h-13 h-10 relative lg:w-[32vh] w-[50vh] "
+        className="lg:h-13 h-10 relative lg:w-[32vh] w-[28vh] "
       >
         <div
           ref={navGreenRef}

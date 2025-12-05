@@ -82,7 +82,7 @@ const FullScreenNav = () => {
         </div>
       </div>
       <div ref={fullNavLinksRef} className="relative">
-        <div className="navlink flex w-full justify-between p-2.5 items-start">
+        <div className="navlink flex w-full justify-between p-3 items-start">
           <div className="">
             <div className="w-30">
               <svg
@@ -102,165 +102,165 @@ const FullScreenNav = () => {
             onClick={() => {
               setNavOpen(false);
             }}
-            className="h-26 w-26 relative cursor-pointer"
+            className="h-28 w-28 relative cursor-pointer"
           >
-            <div className="h-36 w-0.5 -rotate-45 origin-top absolute bg-[#D3FD50]"></div>
-            <div className="h-36 w-0.5 right-0 rotate-45 origin-top absolute bg-[#D3FD50]"></div>
+            <div className="h-39 w-0.5 -rotate-45 origin-top absolute bg-[#D3FD50]"></div>
+            <div className="h-39 w-0.5 right-0 rotate-45 origin-top absolute bg-[#D3FD50]"></div>
             <div></div>
           </div>
         </div>
-        <div className="py-2">
+        <div className="lg:py-2 py-28">
           <div className="link origin-top relative border-t border-white">
-            <h1 className="font-[font2] text-[17vh] leading-[0.8] pt-4 text-center uppercase">
+            <h1 className="font-[font2] lg:text-[17vh] text-[9vh] leading-[0.7] lg:pt-6 pt-4 text-center uppercase">
               Projects
             </h1>
             <div className="moveLink absolute text-black flex top-0 bg-[#D3FD50]">
               <div className="moveX flex items-center">
-                <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
+                <h2 className="whitespace-nowrap font-[font2] lg:text-[17vh] text-[9vh] leading-[0.7] lg:pt-6 pt-4 px-4 text-center uppercase">
                   Pour Toit Voir
                 </h2>
                 <img
-                  className="h-18 w-55 rounded-full shrink-0 object-cover"
+                  className="lg:h-18 h-12 w-40 lg:w-55 rounded-full shrink-0 object-cover"
                   src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg"
                 />
-                <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
+                <h2 className="whitespace-nowrap font-[font2] lg:text-[17vh] text-[9vh] leading-[0.7] lg:pt-6 pt-4 px-4 text-center uppercase">
                   Pour Toit Voir
                 </h2>
                 <img
-                  className="h-18 w-55 rounded-full shrink-0 object-cover"
+                  className="lg:h-18 h-12 w-40 lg:w-55 rounded-full shrink-0 object-cover"
                   src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg"
                 />
               </div>
               <div className="moveX flex items-center">
-                <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
+                <h2 className="whitespace-nowrap font-[font2] lg:text-[17vh] text-[9vh] leading-[0.7] lg:pt-6 pt-4 px-4 text-center uppercase">
                   Pour Toit Voir
                 </h2>
                 <img
-                  className="h-18 w-55 rounded-full shrink-0 object-cover"
+                  className="lg:h-18 h-12 w-40 lg:w-55 rounded-full shrink-0 object-cover"
                   src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg"
                 />
-                <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
+                <h2 className="whitespace-nowrap font-[font2] lg:text-[17vh] text-[9vh] leading-[0.7] lg:pt-6 pt-4 px-4 text-center uppercase">
                   Pour Toit Voir
                 </h2>
                 <img
-                  className="h-18 w-55 rounded-full shrink-0 object-cover"
+                  className="lg:h-18 h-12 w-40 lg:w-55 rounded-full shrink-0 object-cover"
                   src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg"
                 />
               </div>
             </div>
           </div>
           <div className="link origin-top relative border-t border-white">
-            <h1 className="font-[font2] text-[17vh] leading-[0.8] pt-4 text-center uppercase">
+            <h1 className="font-[font2] lg:text-[17vh] text-[9vh] leading-[0.7] lg:pt-6 pt-4 text-center uppercase">
               Agence
             </h1>
             <div className="moveLink absolute text-black flex top-0 bg-[#D3FD50]">
               <div className="moveX flex items-center">
-                <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
+                <h2 className="whitespace-nowrap font-[font2] lg:text-[17vh] text-[9vh] leading-[0.7] lg:pt-6 pt-4 px-4 text-center uppercase">
                   Pour Toit Voir
                 </h2>
                 <img
-                  className="h-18 w-55 rounded-full shrink-0 object-cover"
+                  className="lg:h-18 h-12 w-40 lg:w-55 rounded-full shrink-0 object-cover"
                   src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg"
                 />
-                <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
+                <h2 className="whitespace-nowrap font-[font2] lg:text-[17vh] text-[9vh] leading-[0.7] lg:pt-6 pt-4 px-4 text-center uppercase">
                   Pour Toit Voir
                 </h2>
                 <img
-                  className="h-18 w-55 rounded-full shrink-0 object-cover"
+                  className="lg:h-18 h-12 w-40 lg:w-55 rounded-full shrink-0 object-cover"
                   src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg"
                 />
               </div>
               <div className="moveX flex items-center">
-                <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
+                <h2 className="whitespace-nowrap font-[font2] lg:text-[17vh] text-[9vh] leading-[0.7] lg:pt-6 pt-4 px-4 text-center uppercase">
                   Pour Toit Voir
                 </h2>
                 <img
-                  className="h-18 w-55 rounded-full shrink-0 object-cover"
+                  className="lg:h-18 h-12 w-40 lg:w-55 rounded-full shrink-0 object-cover"
                   src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg"
                 />
-                <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
+                <h2 className="whitespace-nowrap font-[font2] lg:text-[17vh] text-[9vh] leading-[0.7] lg:pt-6 pt-4 px-4 text-center uppercase">
                   Pour Toit Voir
                 </h2>
                 <img
-                  className="h-18 w-55 rounded-full shrink-0 object-cover"
+                  className="lg:h-18 h-12 w-40 lg:w-55 rounded-full shrink-0 object-cover"
                   src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg"
                 />
               </div>
             </div>
           </div>
           <div className="link origin-top relative border-t border-white">
-            <h1 className="font-[font2] text-[17vh] leading-[0.8] pt-4 text-center uppercase">
+            <h1 className="font-[font2] lg:text-[17vh] text-[9vh] leading-[0.7] lg:pt-6 pt-4 text-center uppercase">
               Contact
             </h1>
             <div className="moveLink absolute text-black flex top-0 bg-[#D3FD50]">
               <div className="moveX flex items-center">
-                <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
+                <h2 className="whitespace-nowrap font-[font2] lg:text-[17vh] text-[9vh] leading-[0.7] lg:pt-6 pt-4 px-2 text-center uppercase">
                   Pour Toit Voir
                 </h2>
                 <img
-                  className="h-18 w-55 rounded-full shrink-0 object-cover"
+                  className="lg:h-18 h-12 w-40 lg:w-55 rounded-full shrink-0 object-cover"
                   src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg"
                 />
-                <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
+                <h2 className="whitespace-nowrap font-[font2] lg:text-[17vh] text-[9vh] leading-[0.7] lg:pt-6 pt-4 px-2 text-center uppercase">
                   Pour Toit Voir
                 </h2>
                 <img
-                  className="h-18 w-55 rounded-full shrink-0 object-cover"
+                  className="lg:h-18 h-12 w-40 lg:w-55 rounded-full shrink-0 object-cover"
                   src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg"
                 />
               </div>
               <div className="moveX flex items-center">
-                <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
+                <h2 className="whitespace-nowrap font-[font2] lg:text-[17vh] text-[9vh] leading-[0.7] lg:pt-6 pt-4 px-2 text-center uppercase">
                   Pour Toit Voir
                 </h2>
                 <img
-                  className="h-18 w-55 rounded-full shrink-0 object-cover"
+                  className="lg:h-18 h-12 w-40 lg:w-55 rounded-full shrink-0 object-cover"
                   src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg"
                 />
-                <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
+                <h2 className="whitespace-nowrap font-[font2] lg:text-[17vh] text-[9vh] leading-[0.7] lg:pt-6 pt-4 px-2 text-center uppercase">
                   Pour Toit Voir
                 </h2>
                 <img
-                  className="h-18 w-55 rounded-full shrink-0 object-cover"
+                  className="lg:h-18 h-12 w-40 lg:w-55 rounded-full shrink-0 object-cover"
                   src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg"
                 />
               </div>
             </div>
           </div>
           <div className="link origin-top relative border-y border-t border-white">
-            <h1 className="font-[font2] text-[17vh] leading-[0.8] pt-4 text-center uppercase">
+            <h1 className="font-[font2] lg:text-[17vh] text-[9vh] leading-[0.7] lg:pt-6 pt-4 text-center uppercase">
               Blogue
             </h1>
             <div className="moveLink absolute text-black flex top-0 bg-[#D3FD50]">
               <div className="moveX flex items-center">
-                <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
+                <h2 className="whitespace-nowrap font-[font2] lg:text-[17vh] text-[8vh] leading-[0.7] lg:pt-6 pt-4 px-4 text-center uppercase">
                   Pour Toit Voir
                 </h2>
                 <img
-                  className="h-18 w-55 rounded-full shrink-0 object-cover"
+                  className="lg:h-18 h-12 w-40 lg:w-55 rounded-full shrink-0 object-cover"
                   src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg"
                 />
-                <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
+                <h2 className="whitespace-nowrap font-[font2] lg:text-[17vh] text-[8vh] leading-[0.7] lg:pt-6 pt-4 px-4 text-center uppercase">
                   Pour Toit Voir
                 </h2>
                 <img
-                  className="h-18 w-55 rounded-full shrink-0 object-cover"
+                  className="lg:h-18 h-12 w-40 lg:w-55 rounded-full shrink-0 object-cover"
                   src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg"
                 />
               </div>
               <div className="moveX flex items-center">
-                <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
+                <h2 className="whitespace-nowrap font-[font2] lg:text-[17vh] text-[8vh] leading-[0.7] lg:pt-6 pt-4 px-4 text-center uppercase">
                   Pour Toit Voir
                 </h2>
                 <img
-                  className="h-18 w-55 rounded-full shrink-0 object-cover"
+                  className="lg:h-18 h-12 w-40 lg:w-55 rounded-full shrink-0 object-cover"
                   src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg"
                 />
-                <h2 className="whitespace-nowrap font-[font2] text-[17vh] leading-[0.8] pt-4 px-4 text-center uppercase">
+                <h2 className="whitespace-nowrap font-[font2] lg:text-[17vh] text-[8vh] leading-[0.7] lg:pt-6 pt-4 px-4 text-center uppercase">
                   Pour Toit Voir
                 </h2>
                 <img
-                  className="h-18 w-55 rounded-full shrink-0 object-cover"
+                  className="lg:h-18 h-12 w-40 lg:w-55 rounded-full shrink-0 object-cover"
                   src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg"
                 />
               </div>
